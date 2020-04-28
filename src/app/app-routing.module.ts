@@ -28,9 +28,14 @@ const routes: Routes = [
     loadChildren: () => import('./pages/contacts/contacts.module').then( m => m.ContactsPageModule)
   },
   {
+    path: 'usuarios/todos',
+    loadChildren: () => import('./users/listusers/listusers.module').then( m => m.ListusersPageModule)
+  },
+  {
     path: '**',
     loadChildren: () => import('./pages/e404/e404.module').then( m => m.E404PageModule)
   },
+  
 
 ];
 
