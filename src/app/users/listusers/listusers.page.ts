@@ -63,9 +63,7 @@ loadData(event) {
     for( let i=0; i< news.length; i++) {
       this.itemsPage.push(news[i]);
 
-    
-    
-
+      
     }
     event.target.complete();
 
