@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 
-import { ResponseUsers } from '../models/users.model';
+import { ResponseUsers, ResponseDelUser } from '../models/users.model';
 
 
 @Injectable({
@@ -33,5 +33,14 @@ export class UsersService {
     const url = `${this.apiUrl}?id=${id}`;
 
     return this.http.get<ResponseUsers>(url);
+  }
+
+
+  deleteUser(id: string): Observable<ResponseDelUser> {
+
+ 
+    const url = `${this.apiUrl}?id=${id}`;
+
+    return this.http.delete<ResponseDelUser>(url);
   }
 }
